@@ -25,6 +25,12 @@ SECRET_KEY = '-95t%=#4o3@l-(-%ok9*h%n3!0(sdchjn%+_$5#umaj-!3bg*7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+# Add your Google Analytics tracking code configuration
+#GOOGLE_ANALYTICS = {
+#     'google_analytics_id': 'G-P00JTT8ZFL',
+#}
+
 ALLOWED_HOSTS = []
 
 
@@ -37,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'store'
+    'store',
+    #'google_analytics',
 ]
 
 MIDDLEWARE = [

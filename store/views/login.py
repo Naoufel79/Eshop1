@@ -7,6 +7,14 @@ from django.views import View
 class Login(View):
     return_url = None
 
+
+
+    
+
+
+
+
+
     def get(self, request):
         Login.return_url = request.GET.get ('return_url')
         return render (request, 'login.html')
@@ -23,6 +31,20 @@ class Login(View):
 
                 if Login.return_url:
                     return HttpResponseRedirect (Login.return_url)
+                
+
+#####################################################
+                
+                    # Vérifiez si l'utilisateur est connecté
+                    #if request.method == 'POST':
+                        # Vérifiez les informations d'identification de l'utilisateur
+                        # Si les informations sont valides, redirigez l'utilisateur vers la page de sondage
+                    #return redirect('quiz')
+                #else:
+                        # Afficher le formulaire de connexion
+                    #return render(request, 'login.html')
+ #####################################################
+
                 else:
                     Login.return_url = None
                     return redirect ('homepage')

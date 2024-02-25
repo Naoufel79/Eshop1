@@ -1,6 +1,7 @@
 from django.shortcuts import render , redirect , HttpResponseRedirect
 from store.models.product import Products
 from store.models.category import Category
+
 from django.views import View
 
 
@@ -57,4 +58,17 @@ def store(request):
     print('you are : ', request.session.get('email'))
     return render(request, 'index.html', data)
 
-
+##################################################################
+'''
+def login(request):
+    # Vérifiez si l'utilisateur est connecté
+    if request.method == 'POST':
+        # Vérifiez les informations d'identification de l'utilisateur
+        # Si les informations sont valides, redirigez l'utilisateur vers la page de sondage
+        return redirect('quiz')
+    else:
+        # Afficher le formulaire de connexion
+        return render(request, 'login.html')
+def quiz(request):
+    return render(request, 'quiz.html')
+'''
